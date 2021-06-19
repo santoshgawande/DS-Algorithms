@@ -212,7 +212,7 @@ Array* Array::merge(Array arr2){
 
 
 int main(){
-    Array arr1;
+    Array *arr1;
     int ch, sz;
     int i, x;
     cout<<"Enter a size of an array:\n";
@@ -236,36 +236,33 @@ int main(){
             case 1:
                 cout<<"Enter an element and index :";
                 cin>>i>>x;
-                arr1.Insert( i, x);
+                arr1->Insert( i, x);
                 cout<<"\n";
                 break;
             case 2:
                 printf("Enter index :");
                 cin>>i;
-                x = arr1.Delete(i);
+                x = arr1->Delete(i);
                 cout<<"Deleted element is %d\n"<<x;
                 cout<<"\n";
-
                 break;
             case 3:
                 cout<<"Enter an element to search :";
                 cin>>x;
-                arr1.linearsearch(x);
+                arr1->linearsearch(x);
                 cout<<"\n";
-
                 break;
             case 4:
-                cout<<"Sum of array is :%d\n"<<arr1.sum();
+                cout<<"Sum of array is :%d\n"<<arr1->sum();
                 cout<<"\n";
                 break;
             case 5:
                 cout<<"Array is  :";
-                arr1.Display();
+                arr1->Display();
                 cout<<"\n";
                 break;
 
         }
-
 
     }while(ch<6);
    
